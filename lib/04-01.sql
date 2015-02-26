@@ -1,0 +1,3 @@
+﻿CREATE TABLE seo_translation (id INT, title VARCHAR(250), description TEXT, keywords TEXT, lang CHAR(2), PRIMARY KEY(id, lang));
+CREATE TABLE seo (id SERIAL, url VARCHAR(250), PRIMARY KEY(id));
+ALTER TABLE seo_translation ADD CONSTRAINT seo_translation_id_seo_id FOREIGN KEY (id) REFERENCES seo(id) ON UPDATE CASCADE ON DELETE CASCADE NOT DEFERRABLE INITIALLY IMMEDIATE;

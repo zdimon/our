@@ -1,0 +1,8 @@
+index:
+  is_secure: false
+new:
+  is_secure: true
+edit:
+  is_secure: true
+show:
+  is_secure: false

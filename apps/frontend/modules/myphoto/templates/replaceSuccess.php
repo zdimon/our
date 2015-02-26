@@ -1,0 +1,1 @@
+<?= image_tag('/uploads/photo/big_thumbnail/'.$ph->getImage()) ?>

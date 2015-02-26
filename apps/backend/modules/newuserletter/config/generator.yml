@@ -1,0 +1,27 @@
+generator:
+  class: sfDoctrineGenerator
+  param:
+    model_class:           Newuserletter
+    theme:                 jroller
+    non_verbose_templates: true
+    with_show:             false
+    singular:              ~
+    plural:                ~
+    route_prefix:          newuserletter
+    with_doctrine_route:   true
+    actions_base_class:    sfActions
+
+    config:
+      actions: ~
+      fields:  ~
+      list:
+        display: [id, title, is_send, date_send, to_gender, users_array]
+        object_actions:
+          _edit: ~
+          _delete: ~
+          _send:
+      filter:
+        class: false
+      form:    ~
+      edit:    ~
+      new:     ~

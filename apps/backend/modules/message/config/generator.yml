@@ -1,0 +1,45 @@
+generator:
+  class: sfDoctrineGenerator
+  param:
+    model_class:           Message
+    theme:                 jroller
+    non_verbose_templates: true
+    with_show:             false
+    singular:              ~
+    plural:                ~
+    route_prefix:          message
+    with_doctrine_route:   true
+    actions_base_class:    sfActions
+
+    config:
+      actions: ~
+      fields:
+        from:
+          label: От кого
+        to:
+          label: Кому
+        created_at:
+          label: Дата сообщения
+        id:
+          label: Номер письма
+        is_read:
+          label: Прочитано
+        is_reply:
+          label: Отвечено
+      list:
+#        table_method: retrieveBackendMessageList
+        display: [ id, _image, _from, _to, created_at, is_read, _ans, is_reply]
+        object_actions:
+          _delete: { label: "Удалить", credentials: admin }
+          _edit: { label: "Редактировать", credentials: admin }
+          _show: { label: "Читать" }
+        sort: [id, DESC]
+      filter:
+#        display: [message_id, created_at, from_id, to_id, is_reply]
+        display: [created_at, from_id, to_id, is_reply, is_read, del_to, from_partner_id]
+      form:    ~
+      edit:
+        display: [title, content]
+      new:
+      show:
+        display: [title, content]

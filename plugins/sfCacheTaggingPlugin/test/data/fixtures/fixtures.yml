@@ -1,0 +1,59 @@
+BlogPost:
+  a:
+    title: Foo
+    slug: foo
+    is_enabled: 1
+    Translation:
+      en:
+        content: 'Foo, Foo, Foo'
+      ru:
+        content: 'Фоо, Фоо, Фоо'
+  b:
+    title: Bar
+    slug: bar
+    is_enabled: 0
+    Translation:
+      en:
+        content: 'Bar, Bar, Bar'
+      ru:
+        content: 'Бар, Бар, Бар'
+  c:
+    title: Baz
+    slug: baz
+    is_enabled: 1
+    Translation:
+      en:
+        content: 'Baz, Baz, Baz'
+      ru:
+        content: 'Баз, Баз, Баз'
+
+BlogPostVote:
+  v01: { BlogPost: a, rate: 2 }
+  v02: { BlogPost: a, rate: 2 }
+  v03: { BlogPost: a, rate: 1 }
+  v04: { BlogPost: a, rate: 2 }
+  v06: { BlogPost: a, rate: 1 }
+
+  v07: { BlogPost: b, rate: 5 }
+  v08: { BlogPost: b, rate: 5 }
+  v09: { BlogPost: b, rate: 4 }
+  
+  v10: { BlogPost: c, rate: 4 }
+  v12: { BlogPost: c, rate: 3 }
+  v13: { BlogPost: c, rate: 4 }
+  v14: { BlogPost: c, rate: 4 }
+  v15: { BlogPost: c, rate: 5 }
+  v16: { BlogPost: c, rate: 3 }
+  v17: { BlogPost: c, rate: 3 }
+  v18: { BlogPost: c, rate: 4 }
+  v19: { BlogPost: c, rate: 3 }
+
+BlogPostComment:
+  ac0: { author: fruit, message: 'Hi!', BlogPost: a }
+  ac1: { author: david, message: 'Ha-ya!', BlogPost: a }
+  ac2: { author: fruit, message: 'hru?', BlogPost: a }
+  bc0: { author: fruit, message: 'Ata!', BlogPost: b }
+  bc1: { author: david, message: 'Bye-Bye!', BlogPost: b }
+  bc2: { author: david, message: 'Have a nice day!', BlogPost: b }
+  bc3: { author: marko, message: 'Tra-ala', BlogPost: c }
+  bc4: { author: unknown, message: 'No-commments' }

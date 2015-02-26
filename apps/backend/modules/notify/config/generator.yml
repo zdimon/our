@@ -1,0 +1,34 @@
+generator:
+  class: sfDoctrineGenerator
+  param:
+    model_class:           Notify
+    theme:                 jroller
+    non_verbose_templates: true
+    with_show:             false
+    singular:              ~
+    plural:                ~
+    route_prefix:          notify
+    with_doctrine_route:   true
+    actions_base_class:    sfActions
+
+    config:
+      actions: ~
+      fields:  ~
+      list:
+        object_actions:
+          _edit: ~
+        batch_actions: []
+        actions: { }
+        display: [id, title, _show, _send]
+      filter:
+        class: false
+      form:
+        actions:
+          _list:   ~
+          _save:   ~
+
+      edit:    
+        actions:
+          _save: ~
+          _list: ~
+      new:     ~

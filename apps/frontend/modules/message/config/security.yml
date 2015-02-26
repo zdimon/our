@@ -1,0 +1,4 @@
+index:
+  is_secure: on
+send:
+  is_secure: on

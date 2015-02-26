@@ -1,0 +1,168 @@
+body {
+    font-family: arial;
+    background-color: #eeeeee;
+}
+#sfForumAction {
+    background-color: #045FB4;
+    padding: 5px;
+    color: white;
+    font-weight: bold; 
+}
+#sfForumAction a {
+    color: white;
+    text-decoration: none;
+}
+#sfForumAction a:hover {
+    color: white;
+    text-decoration: underline;
+}
+#sfForumMenu {
+    background-color: #045FB4;
+    padding: 5px;
+    color: white;
+}
+#sfForumMenu a {
+    color: white;
+    text-decoration: none;
+}
+#sfForumMenu a:hover {
+    color: white;
+    text-decoration: underline;
+}
+#sfForumTopicIndex, #sfForumCategoryIndex {
+    background-color: #dedede;
+    width: 100%;
+    border-spacing: 0px;
+    border-collapse: collapse;
+    font-family: arial;
+    color: #2E2E2E;
+}
+#sfForumTopicIndex td:hover, #sfForumCategoryIndex td:hover  {
+    cursor: pointer;
+}
+#sfForumTopicIndex th, #sfForumCategoryIndex th {
+    border-top:solid 4px #045FB4;
+    background-color: #58ACFA;
+    padding: 10px;
+}
+#sfForumTopicIndex td, #sfForumCategoryIndex td {
+    border-top:solid 4px #045FB4;
+    background-color: #CEE3F6;
+    padding: 10px;
+}
+#sfForumTopicIndex a, #sfForumCategoryIndex a {
+    color: navy;
+    text-decoration: none;
+}
+#sfForumTopicIndex a:hover {
+    color: navy;
+    text-decoration: underline;
+}
+p.sfForumMessageShowAuthor {
+    margin: 0;
+    padding: 0;
+    font-weight: bold;
+}
+p.sfForumMessageShowAvatar {
+    margin: 0;
+    padding: 0;
+}
+p.sfForumMessageShowAvatar img {
+    border:solid 1px black;
+}
+#sfForumMessage, #sfForumTopicNew, #sfForumCategoryNew, #sfForumProfil {
+    width: 100%;
+    border-spacing: 0px;
+    border-collapse: collapse;
+    font-family: arial;
+    color: #2E2E2E;
+}
+#sfForumMessage th, #sfForumTopicNew th, #sfForumCategoryNew th, #sfForumProfil th {
+    border-top:solid 4px #045FB4;
+    background-color: #58ACFA;
+    padding: 5px;
+    width: 150px;
+    border-top:solid 4px #045FB4;
+}
+#sfForumMessage td, #sfForumTopicNew td, #sfForumCategoryNew td, #sfForumProfil td {
+    border-top:solid 4px #045FB4;
+    background-color: #CEE3F6;
+    padding: 5px;
+    vertical-align: top;
+}
+#sfForumMessage a {
+    color: navy;
+    text-decoration: none;
+}
+#sfForumMessage a:hover {
+    color: navy;
+    text-decoration: underline;
+}
+#sfForumTopicShow {
+    width: 100%;
+    border-spacing: 0px;
+    border-collapse: collapse;
+    font-family: arial;
+    color: #2E2E2E;
+}
+p.sfForumShowEdited {
+    font-size: 75%;
+    font-style: italic;
+}
+#sfForumTopicShow td {
+    border-top: solid 4px #045FB4;
+}
+#sfForumTopicShow a {
+    color: navy;
+    text-decoration: none;
+}
+#sfForumTopicShow a:hover {
+    color: navy;
+    text-decoration: underline;
+}
+td.sfForumTopicShowInfo {
+    text-align: center;
+    background-color: #58ACFA;
+    padding: 5px;
+    width:200px;
+}
+td.sfForumTopicShowContent {
+    background-color: #CEE3F6;
+    padding: 5px;
+    vertical-align: top;
+}
+div.sfForumMessageBody {
+    clear: both;
+    background-color: #bebebe;
+    border: solid 1px #dedede;
+    background-color: #00FFF0;
+    padding: 5px;
+    width: 100%;
+}
+div.sfForumMessageInfo {
+    float:left;
+    margin-right:20px;
+    background-color:#00AFF0;
+    padding:5px;
+}
+div.sfForumMessageContent {
+    float:left;
+    background-color:#00FFF0;
+}
+div.paginate {
+    border-top:solid 4px #045FB4;
+    background-color: #58ACFA;
+    color:black;
+    padding:2px;
+}
+div.paginate a {
+    color: navy;
+    text-decoration: none;
+}
+div.paginate a:hover {
+    text-decoration: underline;
+}
+#test {
+    font-size:200%;
+    color:red;
+}

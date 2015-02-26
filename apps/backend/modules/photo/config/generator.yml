@@ -1,0 +1,46 @@
+generator:
+  class: sfDoctrineGenerator
+  param:
+    model_class:           Photo
+    theme:                 jroller
+    non_verbose_templates: true
+    with_show:             false
+    singular:              ~
+    plural:                ~
+    route_prefix:          photo
+    with_doctrine_route:   true
+    actions_base_class:    sfActions
+
+    config:
+      actions: ~
+      fields:
+        image: {label: Photo}
+        pub: {label: Approve}
+        is_main: {label: Main photo}
+        created_at: {label: Created at}
+        actions: {label: Actions}
+        user: {label: User}
+        user_id: {label: ID user}
+
+      list:
+        title: Photos
+        table_method: retrieveBackendPhotoList
+        display: [_image, _user, pub, is_main, created_at]
+        object_actions:
+          _delete: {label: Delete}
+          activate: { ui-icon: circle-check, label: Activate,  credentials: admin  }
+          deactivate: { ui-icon: circle-close, label: Deactivate,  credentials: admin }
+          setmain: { ui-icon: circle-check, label: Set main }
+        batch_actions:
+          _delete:    {label: Delete}
+          activate:    { label: Activate,  credentials: admin }
+          deactivate:    { label: Deactivate,  credentials: admin }
+        sort: [id, DESC]
+      filter:
+        display: [pub, user_id, gender]
+      form:    
+        actions:       
+          _list:   ~
+          _save:   ~
+      edit:    ~
+      new:     ~

@@ -1,0 +1,1 @@
+<h1 style="color: red;" align="center"><?= __('This user forbide you to do this operation!') ?></h1>

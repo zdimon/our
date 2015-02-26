@@ -1,0 +1,38 @@
+generator:
+  class: sfDoctrineGenerator
+  param:
+    model_class:           sfGuardUser
+    theme:                 jroller
+    non_verbose_templates: true
+    with_show:             false
+    singular:              ~
+    plural:                ~
+    route_prefix:          sf_guard_user
+    with_doctrine_route:   true
+    actions_base_class:    sfActions
+
+    config:
+      actions: ~
+      fields:
+        real_name: {title: Ник}
+        is_active: {title: Активирован}
+        gender: {label: Пол}
+        account: {label: На счету}
+        permissions_list: {label: Права}
+        created_at: {label: Создан}
+        last_login: {label: Последний заход}
+      list:
+        title: Список всех пользователей
+        display: [id, username, email, account, gender, last_login, created_at]
+        object_actions:
+          _edit:  ~
+          _delete: ~
+        actions: []
+
+        batch_actions:
+          _delete:   ~
+      filter:
+        display: [gender, is_partner, email, username]
+      form:    ~
+      edit:    ~
+      new:     ~

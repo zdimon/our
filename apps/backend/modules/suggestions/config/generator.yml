@@ -1,0 +1,34 @@
+generator:
+  class: sfDoctrineGenerator
+  param:
+    model_class:           Suggestions
+    theme:                 jroller
+    non_verbose_templates: true
+    with_show:             false
+    singular:              ~
+    plural:                ~
+    route_prefix:          suggestions
+    with_doctrine_route:   true
+    actions_base_class:    sfActions
+
+    config:
+      actions: ~
+      fields:  ~
+      list:
+        display: [name, body, email, pub, created_at]
+        batch_actions:
+          _delete:    {credentials: admin}
+          _activate:  {credentials: admin}
+          _deactivate: {credentials: admin}
+        object_actions:
+          _show: ~
+          _edit: [credentials: admin]
+          _delete: {credentials: admin}
+          _activate: {credentials: admin}
+          _deactivate: {credentials: admin}
+      filter:
+        display: [pub]
+      form:    ~
+      edit:    ~
+      new:     ~
+

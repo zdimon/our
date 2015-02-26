@@ -1,0 +1,37 @@
+generator:
+  class: sfDoctrineGenerator
+  param:
+    model_class:           Settings
+    theme:                 jroller
+    non_verbose_templates: true
+    with_show:             false
+    singular:              ~
+    plural:                ~
+    route_prefix:          settings
+    with_doctrine_route:   true
+    actions_base_class:    sfActions
+
+    config:
+      actions: ~
+      fields:
+        var_name:
+          label: Name of the variable
+        var_value:
+          label: Value
+        var_description:
+          label: Description
+      list:
+        title: Settings
+        display: [var_description,  var_value, var_name]
+        object_actions:
+          _edit: ~
+        max_per_page:   60
+        batch_actions: []
+      filter:
+        class: false
+      form:    ~
+      edit:
+        display: [var_value, var_name, var_description]
+        actions:
+          _save: ~
+      new:     ~

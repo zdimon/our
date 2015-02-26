@@ -1,0 +1,42 @@
+# You can find more information about this file on the symfony website:
+# http://www.symfony-project.org/reference/1_4/en/10-Routing
+
+
+lang:
+  url:   /setlang/:l.html
+  param: { module: lang, action: index, l: l }
+
+gift_category:
+  url:   /giftcat/:id.html
+  param: { module: gift, action: show_category, id: id }
+
+page:
+  url:  /:sf_culture/page/:alias.html
+  param: { module: page, action: index, alias: alias }
+
+
+sf_guard_signin:
+  url:   /login
+  param: { module: sfGuardAuth, action: signin }
+
+sf_guard_signout:
+  url:   /logout
+  param: { module: sfGuardAuth, action: signout }
+
+# default rules
+homepage:
+  url:   /
+  param: { module: mainpage, action: index }
+
+mainpage:
+  url:   /:sf_culture/home.html
+  param: { module: mainpage, action: index }
+
+# generic rules
+# please, remove them by adding more specific rules
+default_index:
+  url:   /:module
+  param: { action: index }
+
+default:
+  url:   /:sf_culture/:module/:action/*

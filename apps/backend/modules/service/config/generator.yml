@@ -1,0 +1,40 @@
+generator:
+  class: sfDoctrineGenerator
+  param:
+    model_class:           Service
+    theme:                 jroller
+    non_verbose_templates: true
+    with_show:             false
+    singular:              ~
+    plural:                ~
+    route_prefix:          service
+    with_doctrine_route:   true
+    actions_base_class:    sfActions
+
+    config:
+      actions: ~
+      fields:
+        title: {label: Описание}
+        cost:  {label: Стоимость, help: в кредитах}
+        comission: {label: Комиссия партнеру, help: в долларах }
+        show_man: {label: Показ мужчинам, help: отображать платежи в статистике оплат мужчины на сайте}
+        show_partner: {label: Показ партнеру, help: учитывать платежи в бонусах партнера}
+      list:
+        title: Платные услуги на сайте
+        display: [title, cost, comission, show_man, show_partner]
+        object_actions:
+          _edit: ~
+        batch_actions: {}
+        actions: { }
+      filter:
+        class: false
+      form:    
+        actions:
+          _list:   ~
+          _save:   ~
+      edit:
+        title: Редактирование услуги
+        
+        actions:
+          _save: ~
+      new:     ~

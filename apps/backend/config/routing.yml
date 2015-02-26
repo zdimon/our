@@ -1,0 +1,524 @@
+actions:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                Actions
+    module:               actions
+    prefix_path:          /actions
+    column:               id
+    with_wildcard_routes: true
+
+type_actions:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                TypeActions
+    module:               type_actions
+    prefix_path:          /type_actions
+    column:               id
+    with_wildcard_routes: true
+
+suggestions:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                Suggestions
+    module:               suggestions
+    prefix_path:          /suggestions
+    column:               id
+    with_wildcard_routes: true
+
+keyword:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                Keyword
+    module:               keyword
+    prefix_path:          /keyword
+    column:               id
+    with_wildcard_routes: true
+
+liqpay:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                Liqpay
+    module:               liqpay
+    prefix_path:          /liqpay
+    column:               id
+    with_wildcard_routes: true
+
+seo:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                seo
+    module:               seo
+    prefix_path:          /seo
+    column:               id
+    with_wildcard_routes: true
+
+my_country:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                MyCountry
+    module:               my_country
+    prefix_path:          /my_country
+    column:               id
+    with_wildcard_routes: true
+
+my_city:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                MyCity
+    module:               my_city
+    prefix_path:          /my_city
+    column:               id
+    with_wildcard_routes: true
+
+scamer_report:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                ScamerReport
+    module:               scamer_report
+    prefix_path:          /scamer_report
+    column:               id
+    with_wildcard_routes: true
+
+chat2_room_chat_room:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                Chat2Room
+    module:               chat_room
+    prefix_path:          /chat_room
+    column:               id
+    with_wildcard_routes: true
+
+newuserletter:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                Newuserletter
+    module:               newuserletter
+    prefix_path:          /newuserletter
+    column:               id
+    with_wildcard_routes: true
+
+profile_trprofile:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                Profile
+    module:               trprofile
+    prefix_path:          /trprofile
+    column:               id
+    with_wildcard_routes: true
+
+chat2_chanels:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                Chat2Chanels
+    module:               chat_chanel
+    prefix_path:          /chat_chanel
+    column:               id
+    with_wildcard_routes: true
+
+sf_forum_category:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                sfForumCategory
+    module:               forum_category
+    prefix_path:          /forum_category
+    column:               id
+    with_wildcard_routes: true
+
+mailer:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                Mailer
+    module:               mailer
+    prefix_path:          /mailer
+    column:               id
+    with_wildcard_routes: true
+
+newsletter:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                Newsletter
+    module:               newsletter
+    prefix_path:          /newsletter
+    column:               id
+    with_wildcard_routes: true
+
+profile_packet:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                ProfilePacket
+    module:               profile_packet
+    prefix_path:          /profile_packet
+    column:               id
+    with_wildcard_routes: true
+
+news:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                News
+    module:               news
+    prefix_path:          /news
+    column:               id
+    with_wildcard_routes: true
+
+testimonials:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                Testimonials
+    module:               testimonials
+    prefix_path:          /testimonials
+    column:               id
+    with_wildcard_routes: true
+
+gift_order:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                GiftOrder
+    module:               gift_order
+    prefix_path:          /gift_order
+    column:               id
+    with_wildcard_routes: true
+
+vgift_category:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                VgiftCategory
+    module:               vgift_category
+    prefix_path:          /vgift_category
+    column:               id
+    with_wildcard_routes: true
+
+vgift:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                Vgift
+    module:               vgift
+    prefix_path:          /vgift
+    column:               id
+    with_wildcard_routes: true
+
+settings:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                Settings
+    module:               settings
+    prefix_path:          /settings
+    column:               id
+    with_wildcard_routes: true
+
+chat2_message:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                Chat2Message
+    module:               chatmessage
+    prefix_path:          /chatmessage
+    column:               id
+    with_wildcard_routes: true
+
+contact:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                Friend
+    module:               contact
+    prefix_path:          /contact
+    column:               id
+    with_wildcard_routes: true
+
+chat2_room:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                Chat2Room
+    module:               chat
+    prefix_path:          /chat
+    column:               id
+    with_wildcard_routes: true
+
+profile_anket:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                Profile
+    module:               anket
+    prefix_path:          /anket
+    column:               id
+    with_wildcard_routes: true
+
+bonus_payment:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                BonusPayment
+    module:               bonus_payment
+    prefix_path:          /bonus_payment
+    column:               id
+    with_wildcard_routes: true
+
+apartment:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                Apartment
+    module:               apartment
+    prefix_path:          /apartment
+    column:               id
+    with_wildcard_routes: true
+
+fletter_log:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                FletterLog
+    module:               fletter_log
+    prefix_path:          /fletter_log
+    column:               id
+    with_wildcard_routes: true
+
+fletter:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                Fletter
+    module:               fletter
+    prefix_path:          /fletter
+    column:               id
+    with_wildcard_routes: true
+
+friend:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                Friend
+    module:               contact
+    prefix_path:          /contact
+    column:               id
+    with_wildcard_routes: true
+
+giftbox:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                Giftbox
+    module:               giftbox
+    prefix_path:          /giftbox
+    column:               id
+    with_wildcard_routes: true
+
+task:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                Task
+    module:               task
+    prefix_path:          /task
+    column:               id
+    with_wildcard_routes: true
+
+claim:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                Claim
+    module:               claim
+    prefix_path:          /claim
+    column:               id
+    with_wildcard_routes: true
+
+ban:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                Ban
+    module:               ban
+    prefix_path:          /ban
+    column:               id
+    with_wildcard_routes: true
+
+faq:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                Faq
+    module:               faq
+    prefix_path:          /faq
+    column:               id
+    with_wildcard_routes: true
+
+profile_type_profile_type:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                ProfileType
+    module:               profile_type
+    prefix_path:          /profile_type
+    column:               id
+    with_wildcard_routes: true
+
+profile_type:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                ProfileType
+    module:               profiletype
+    prefix_path:          /profiletype
+    column:               id
+    with_wildcard_routes: true
+
+ban_type:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                BanType
+    module:               bantype
+    prefix_path:          /bantype
+    column:               id
+    with_wildcard_routes: true
+
+billing_type:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                BillingType
+    module:               billingtype
+    prefix_path:          /billingtype
+    column:               id
+    with_wildcard_routes: true
+
+payment:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                Payment
+    module:               payment
+    prefix_path:          /payment
+    column:               id
+    with_wildcard_routes: true
+
+billing:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                Billing
+    module:               billing
+    prefix_path:          /billing
+    column:               id
+    with_wildcard_routes: true
+
+service:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                Service
+    module:               service
+    prefix_path:          /service
+    column:               id
+    with_wildcard_routes: true
+
+gift:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                Gift
+    module:               gift
+    prefix_path:          /gift
+    column:               id
+    with_wildcard_routes: true
+
+gift_category:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                GiftCategory
+    module:               giftcategory
+    prefix_path:          /giftcategory
+    column:               id
+    with_wildcard_routes: true
+
+message:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                Message
+    module:               message
+    prefix_path:          /message
+    column:               id
+    with_wildcard_routes: true
+
+sf_guard_user:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                sfGuardUser
+    module:               guarduser
+    prefix_path:          /guarduser
+    column:               id
+    with_wildcard_routes: true
+
+photo_p:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                Photo
+    module:               p
+    prefix_path:          /p
+    column:               id
+    with_wildcard_routes: true
+
+profile_partner:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                ProfilePartner
+    module:               partner
+    prefix_path:          /partner
+    column:               id
+    with_wildcard_routes: true
+
+profile:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                Profile
+    module:               user
+    prefix_path:          /user
+    column:               id
+    with_wildcard_routes: true
+
+video:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                Video
+    module:               video
+    prefix_path:          /video
+    column:               id
+    with_wildcard_routes: true
+
+photo:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                Photo
+    module:               photo
+    prefix_path:          /photo
+    column:               id
+    with_wildcard_routes: true
+
+notify:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                Notify
+    module:               notify
+    prefix_path:          /notify
+    column:               id
+    with_wildcard_routes: true
+
+sf_guard_signin:
+  url:   /login
+  param: { module: sfGuardAuth, action: signin }
+
+sf_guard_signout:
+  url:   /logout
+  param: { module: sfGuardAuth, action: signout }
+
+page:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                Page
+    module:               page
+    prefix_path:          /page
+    column:               id
+    with_wildcard_routes: true
+
+# You can find more information about this file on the symfony website:
+# http://www.symfony-project.org/reference/1_4/en/10-Routing
+
+# default rules
+homepage:
+  url:   /main.html
+  param: { module: mainpage, action: index }
+
+mainpage:
+  url:   /
+  param: { module: mainpage, action: index }
+
+
+# generic rules
+# please, remove them by adding more specific rules
+default_index:
+  url:   /:module
+  param: { action: index }
+
+default:
+  url:   /:module/:action/*

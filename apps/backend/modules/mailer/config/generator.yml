@@ -1,0 +1,26 @@
+generator:
+  class: sfDoctrineGenerator
+  param:
+    model_class:           Mailer
+    theme:                 jroller
+    non_verbose_templates: true
+    with_show:             false
+    singular:              ~
+    plural:                ~
+    route_prefix:          mailer
+    with_doctrine_route:   true
+    actions_base_class:    sfActions
+
+    config:
+      actions: ~
+      fields:  ~
+      list:
+        display: [title, is_sent, date_sent, email]
+        object_actions:
+          _delete: ~
+          _show: ~
+          _send:
+      filter:  ~
+      form:    ~
+      edit:    ~
+      new:     ~

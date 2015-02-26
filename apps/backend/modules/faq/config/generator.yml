@@ -1,0 +1,53 @@
+generator:
+  class: sfDoctrineGenerator
+  param:
+    model_class:           Faq
+    theme:                 jroller
+    non_verbose_templates: true
+    with_show:             false
+    singular:              ~
+    plural:                ~
+    route_prefix:          faq
+    with_doctrine_route:   true
+    actions_base_class:    sfActions
+
+    config:
+      actions: ~
+      fields:
+        user:
+          label: 'От кого'
+        is_read:
+          label: Readed
+        file:
+          label: Вложение
+        title:
+          label: Заголовок
+        created_at:
+          label: Дата
+        answer:
+          label: Админ
+        description:
+          label: Содержание
+        pub:
+          label: Approved
+      list:
+        title: FAQ
+        display: [title, pub, created_at]
+        batch_actions:
+          _delete:    {credentials: admin}
+          _activate:  {credentials: admin}
+          _deactivate: {credentials: admin}
+        object_actions:
+          _show: ~
+          _edit: [credentials: admin]
+          _delete: {credentials: admin}
+          _activate: {credentials: admin}
+          _deactivate: {credentials: admin}
+        sort: [id, DESC]
+      filter:
+        display: [pub]
+      form:    ~
+      edit:    ~
+      new:     ~
+      show:
+        display: [title, description]

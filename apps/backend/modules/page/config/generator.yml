@@ -1,0 +1,33 @@
+generator:
+  class: sfDoctrineGenerator
+  param:
+    model_class:           Page
+    theme:                 jroller
+    non_verbose_templates: true
+    with_show:             false
+    singular:              ~
+    plural:                ~
+    route_prefix:          page
+    with_doctrine_route:   true
+    actions_base_class:    sfActions
+
+    config:
+      actions:
+      fields:
+        title: { label: Description}
+        link: { label: Link }
+      list:
+        display: [_link, title]
+        object_actions:
+          _edit: {label: Edit}
+          _delete: {label: Delete}
+        batch_actions: []
+      filter:
+        class: false
+      form:    ~
+      edit:
+        title: Editing page
+        actions:
+          _save: ~
+          _list: ~
+      new:     ~

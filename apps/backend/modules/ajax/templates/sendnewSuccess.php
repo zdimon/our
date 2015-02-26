@@ -1,0 +1,1 @@
+<?= __('Letters was sended!') ?>

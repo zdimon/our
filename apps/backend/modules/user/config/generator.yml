@@ -1,0 +1,50 @@
+generator:
+  class: sfDoctrineGenerator
+  param:
+    model_class:           Profile
+    theme:                 jroller
+    non_verbose_templates: true
+    with_show:             false
+    singular:              ~
+    plural:                ~
+    route_prefix:          profile
+    with_doctrine_route:   true
+    actions_base_class:    sfActions
+
+    config:
+      actions: ~
+      fields:
+        photo: { label: Photo }
+        info: { label: Information }
+        stat: { label: Statistic }
+        status: { label: Status }
+        act:  { label: Actions }
+        link:  { label: Letters/Delivery }
+        partner:  { label: Agency }
+        user_id:  { label: ID }
+        status_id:  { label: Status }
+        gender:  { label: Gender }
+
+      list:
+        title: Список анкет
+        table_method: retrieveBackendUserList
+        display: [ _photo, _info, _stat, _link, _act]
+        batch_actions: 
+          _delete:  { label: "Delete", credentials: admin }
+          ondelete: { label: "On deleteе", credentials: partner }
+          activate:    { label: "Activate", credentials: admin }
+          deactivate:  { label: "On deactivate" }
+        object_actions: []
+        max_per_page:   5
+        sort: [id, DESC]
+      filter:
+        display: [status_id, gender, partner_id, first_name, last_name, birthday, scamer]
+      form:    
+        class: admUserForm
+      edit:
+        actions:
+          _save: ~
+
+      new:     
+        actions:
+          _save: ~

@@ -1,0 +1,4 @@
+default:
+  is_secure: on
+call:
+  is_secure: false

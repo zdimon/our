@@ -1,0 +1,17 @@
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/repos/datebride/!svn/ver/9/plugins/sfPaymentPlugin/test/bootstrap
+END
+unit.php
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/repos/datebride/!svn/ver/9/plugins/sfPaymentPlugin/test/bootstrap/unit.php
+END
+functional.php
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/repos/datebride/!svn/ver/9/plugins/sfPaymentPlugin/test/bootstrap/functional.php
+END

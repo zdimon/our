@@ -1,0 +1,28 @@
+generator:
+  class: sfDoctrineGenerator
+  param:
+    model_class:           Profile
+    theme:                 jroller
+    non_verbose_templates: true
+    with_show:             false
+    singular:              ~
+    plural:                ~
+    route_prefix:          profile_trprofile
+    with_doctrine_route:   true
+    actions_base_class:    sfActions
+
+    config:
+      actions: ~
+      fields:  ~
+      list:
+        title: Translating profiles
+        display: [id, _info, gender]
+        object_actions:
+          _edit: ~
+        sort: [id, DESC]
+      filter:
+        display: [gender]
+      form:
+        class: trProfileForm
+      edit:    ~
+      new:     ~

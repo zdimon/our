@@ -1,0 +1,47 @@
+# You can find more information about this file on the symfony website:
+# http://www.symfony-project.org/reference/1_4/en/04-Settings
+
+prod:
+  .settings:
+    no_script_name:         true
+    logging_enabled:        false
+
+dev:
+  .settings:
+    error_reporting:        <?php echo ((E_ALL | E_STRICT) ^ E_DEPRECATED ^ E_NOTICE ^ E_WARNING)."\n" ?>
+    web_debug:              true
+    cache:                  true
+    no_script_name:         false
+    etag:                   false
+
+test:
+  .settings:
+    error_reporting:        <?php echo ((E_ALL | E_STRICT) ^ E_NOTICE)."\n" ?>
+    cache:                  false
+    web_debug:              false
+    no_script_name:         false
+    etag:                   false
+
+all:
+  .settings:
+    # Form security secret (CSRF protection)
+    csrf_secret:            56bd4dc0d3878929572a5e217dd214fb9b8309b9
+
+    # Output escaping settings
+    escaping_strategy:      false
+    escaping_method:        ESC_SPECIALCHARS
+
+    # Enable the database manager
+    use_database:           true
+    login_module:           access
+    login_action:           onlyregister
+
+    secure_module:          access   # To be called when a user doesn't have
+    secure_action:          denite    # The credentials required for an action
+    i18n:            true
+    default_culture: en
+    error_404_module:       access   # To be called when a 404 error is raised
+    error_404_action:       notfound  # Or when the requested URL doesn't match any route
+    enabled_modules:      [default, sfGuardAuth, sfPHPCaptchaPlugin, sfCaptchaGD, mgI18nAdmin, sfPaymentPayPal, sfForumTopic, sfForumMessage, sfForumCategory, sfForumProfil]
+    path_info_key:          REDIRECT_URL
+    cache:                  true

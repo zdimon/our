@@ -1,0 +1,26 @@
+generator:
+  class: sfDoctrineGenerator
+  param:
+    model_class:           Newsletter
+    theme:                 jroller
+    non_verbose_templates: true
+    with_show:             false
+    singular:              ~
+    plural:                ~
+    route_prefix:          newsletter
+    with_doctrine_route:   true
+    actions_base_class:    sfActions
+
+    config:
+      actions: ~
+      fields:  ~
+      list:
+        display: [name, is_sent, created_at]
+        object_actions:
+          _delete: {label: Delete}
+          _edit:  {label: Edit}
+          send: { ui-icon: circle-check, label: Send,  credentials: admin  }
+      filter:  ~
+      form:    ~
+      edit:    ~
+      new:     ~

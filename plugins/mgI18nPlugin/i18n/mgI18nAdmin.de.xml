@@ -1,0 +1,84 @@
+<?xml version="1.0" ?>
+<xliff version="1.0">
+  <file orginal="global" source-language="en_EN" datatype="plaintext">
+    <body>
+    
+      <!-- swWidgetFormDoctrineSelectNestedSetPosition -->
+      <trans-unit id="1">
+        <source>title_translation</source>
+        <target>Übersetzungen</target>
+      </trans-unit>
+      <trans-unit id="1">
+        <source>tabs_translation_current_page</source>
+        <target>Seite</target>
+      </trans-unit>      
+      <trans-unit id="1">
+        <source>tabs_translation_ajax_lib_application</source>
+        <target>Dateien</target>
+      </trans-unit>
+      <trans-unit id="1">
+        <source>tabs_translation_db</source>
+        <target>Datenbank</target>
+      </trans-unit>
+      <trans-unit id="1">
+        <source>label_hide_translated_page</source>
+        <target>Übersetzte Texte verstecken</target>
+      </trans-unit>
+      <trans-unit id="1">
+        <source>tabs_translation_help</source>
+        <target>Hilfe</target>
+      </trans-unit>
+      <trans-unit id="1">
+        <source>label_filter_list</source>
+        <target>Filter : </target>
+      </trans-unit>
+      <trans-unit id="1">
+        <source>header_catalogue</source>
+        <target>Katalog</target>
+      </trans-unit>
+      <trans-unit id="1">
+        <source>header_targets</source>
+        <target>Ziel</target>
+      </trans-unit>
+      <trans-unit id="1">
+        <source>header_source</source>
+        <target>Quelle</target>
+      </trans-unit>
+      <trans-unit id="1">
+        <source>header_target</source>
+        <target>Ziel</target>
+      </trans-unit>
+      <trans-unit id="1">
+        <source>label_parameters</source>
+        <target>Parameter</target>
+      </trans-unit>
+      <trans-unit id="1">
+        <source>btn_save_translation</source>
+        <target>Übersetzung speichern</target>
+      </trans-unit>
+      <trans-unit id="1">
+        <source>legend_translations</source>
+        <target>Übersetzung verfügbar</target>
+      </trans-unit>
+      <trans-unit id="1">
+        <source>message_instruction</source>
+        <target>
+          <![CDATA[
+          1. Wähle einen Eintrag aus der linken Tabelle aus um seine aktuellen Übersetzungen zu sehen. <br />
+          2. Dann kannst du die einzelnen Übersetzungen bearbeiten. <br />
+          3. <strong>Speicher deine Übersetzung !</strong>
+          ]]>
+        </target>
+      </trans-unit>
+      <trans-unit id="1">
+        <source>message_loading</source>
+        <target>
+           <![CDATA[
+          Loading in progress ... <br />
+          <em>(Dies kann bis zu 20s dauern.)</em>
+          ]]>
+        </target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

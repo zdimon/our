@@ -1,0 +1,46 @@
+How to install:
+
+    symfony plugin:install -alpha sfCKEditorPlugin
+
+How to use:
+
+    [php]
+    $this->widgetSchema['my_editor'] = new sfWidgetFormCKEditor();
+
+Set CKEditor config param:
+
+    [php]
+    $this->widgetSchema['my_editor'] = new sfWidgetFormCKEditor(array('jsconfig'=>array('param' => 'value'));
+
+Define  the CKEditor path in settings.yml :
+
+    all:
+      .settings:
+        rich_text_ck_js_file : ckeditor/ckeditor.js
+        
+config.toolbar = 'Full';
+ 
+config.toolbar_Full =
+[
+    ['Source','-','Save','NewPage','Preview','-','Templates'],
+    ['Cut','Copy','Paste','PasteText','PasteFromWord','-','Print', 'SpellChecker', 'Scayt'],
+    ['Undo','Redo','-','Find','Replace','-','SelectAll','RemoveFormat'],
+    ['Form', 'Checkbox', 'Radio', 'TextField', 'Textarea', 'Select', 'Button', 'ImageButton', 'HiddenField'],
+    '/',
+    ['Bold','Italic','Underline','Strike','-','Subscript','Superscript'],
+    ['NumberedList','BulletedList','-','Outdent','Indent','Blockquote','CreateDiv'],
+    ['JustifyLeft','JustifyCenter','JustifyRight','JustifyBlock'],
+    ['BidiLtr', 'BidiRtl'],
+    ['Link','Unlink','Anchor'],
+    ['Image','Flash','Table','HorizontalRule','Smiley','SpecialChar','PageBreak','Iframe'],
+    '/',
+    ['Styles','Format','Font','FontSize'],
+    ['TextColor','BGColor'],
+    ['Maximize', 'ShowBlocks','-','About']
+];
+ 
+config.toolbar_Basic =
+[
+    ['Bold', 'Italic', '-', 'NumberedList', 'BulletedList', '-', 'Link', 'Unlink','-','About']
+];        
+    

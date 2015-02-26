@@ -1,0 +1,52 @@
+sfDoctrineForum Plugin
+========
+
+Forum for symfony :
+
+ * User with sfDoctrineGuardPlugin plugin
+
+ * Permission on category
+
+ * edit/delete your message
+
+ * Put an image on your profile
+
+Installation
+--------
+
+Install the plugin
+
+    $ symfony plugin:install sfDoctrineForumPlugin --stability=beta
+
+Rebuild your model
+
+    $ symfony doctrine:data-dump
+    $ symfony doctrine:build --all --and-load
+
+Clear your cache
+
+    $ symfony cc
+
+publishing the plugin
+
+    $ php symfony plugin:publish-assets
+
+Enable the module Forum in settings.yml
+
+    all:
+      .settings:
+        enabled_modules: [..., sfForumTopic, sfForumMessage, sfForumCategory, sfForumProfil, sfGuardAuth]
+
+Optionnal : create administration form
+
+    $ symfony doctrine:generate-admin backend Message
+    $ symfony doctrine:generate-admin backend Topic
+    $ symfony doctrine:generate-admin backend Category
+
+Optionnal : create user
+
+    $ symfony guard:create-user user password
+
+Only super admin user can create category
+
+    $ sf guard:promote user

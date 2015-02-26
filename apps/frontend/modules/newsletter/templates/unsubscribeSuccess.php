@@ -1,0 +1,1 @@
+<iframe src="http://best-of-dates.com/news/runsubscribe?id=<?= $id ?>&lang=<?= $lang ?>" width="710" height="800" frameborder="0" scrolling="no"></iframe> 

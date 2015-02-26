@@ -1,0 +1,86 @@
+# You can find more information about this file on the symfony website:
+# http://www.symfony-project.org/reference/1_4/en/10-Routing
+
+
+
+search_album:
+  url:   /:sf_culture/all_women
+  param: { module: search, action: index, title: gallery_women }
+
+search_album_men:
+  url:   /:sf_culture/gallery_men
+  param: { module: search, action: index, title: gallery_men }
+
+search_album_woman:
+  url:   /:sf_culture/gallery_women
+  param: { module: search, action: index, title: gallery_women }
+
+    
+search_most:
+  url:   /:sf_culture/most_viewed
+  param: { module: search, action: index, order: rating } 
+  
+search_less:
+  url:   /:sf_culture/less_viewed
+  param: { module: search, action: index, order: unrating }   
+  
+search_new:
+  url:   /:sf_culture/new_member_women
+  param: { module: search, action: index, new: true }   
+  
+search_top:
+  url:   /:sf_culture/top100
+  param: { module: search, action: index, type: top }     
+  
+search_video:
+  url:   /:sf_culture/video_members
+  param: { module: search, action: index, with_video: on }   
+  
+search_adv:
+  url:   /:sf_culture/advanced_search
+  param: { module: search, action: adv }     
+  
+  
+
+  
+
+lang:
+  url:   /setlang/:l.html
+  param: { module: lang, action: index, l: l }
+
+
+
+gift_category:
+  url:   /giftcat/:id.html
+  param: { module: gift, action: show_category, id: id }
+
+page:
+  url:  /:sf_culture/:alias.html
+  param: { module: page, action: index, alias: alias }
+
+
+sf_guard_signin:
+  url:   /login
+  param: { module: sfGuardAuth, action: signin }
+
+sf_guard_signout:
+  url:   /logout
+  param: { module: sfGuardAuth, action: signout }
+
+# default rules
+homepage:
+  url:   /
+  param: { module: mainpage, action: index }
+
+mainpage:
+  url:   /
+  param: {  module: page, action: index, alias: mainpage }
+
+# generic rules
+# please, remove them by adding more specific rules
+default_index:
+  url:   /:sf_culture/:module
+  param: { action: index }
+
+default:
+  url:   /:sf_culture/:module/:action/*

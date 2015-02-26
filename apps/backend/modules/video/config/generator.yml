@@ -1,0 +1,41 @@
+generator:
+  class: sfDoctrineGenerator
+  param:
+    model_class:           Video
+    theme:                 jroller
+    non_verbose_templates: true
+    with_show:             false
+    singular:              ~
+    plural:                ~
+    route_prefix:          video
+    with_doctrine_route:   true
+    actions_base_class:    sfActions
+
+    config:
+      actions: ~
+      fields:
+        image: { label: Превью}
+        pub:   {label: Активирован}
+        size:  {label: Размер}
+        format: {label: Формат }
+        created_at: {label: Создан}
+        is_convert: {label: Отконвертирован}
+        user_id: {label: ID пользователя}
+      list:
+        title: Список видеороликов
+        table_method: retrieveBackendVideoList
+        display: [_image, username, pub, created_at]
+        object_actions:
+          _delete:
+          activate: { ui-icon: circle-check, label: Активировать, credentials: admin }
+          deactivate: { ui-icon: circle-close, label: Деактивировать, credentials: admin }
+        sort: [id, DESC]
+      filter:
+        display: [pub, is_convert, user_id, gender]
+
+      form:    
+        actions:       
+          _list:   ~
+          _save:   ~
+      edit:    ~
+      new:     ~

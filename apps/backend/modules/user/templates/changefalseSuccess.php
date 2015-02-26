@@ -1,0 +1,1 @@
+<?php die('Script Status Changed...'); ?>

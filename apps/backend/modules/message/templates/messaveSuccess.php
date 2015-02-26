@@ -1,0 +1,1 @@
+<span style="color: green;"> <?= $mes->getContent() ?></span>

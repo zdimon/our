@@ -1,0 +1,25 @@
+generator:
+  class: sfDoctrineGenerator
+  param:
+    model_class:           MyCountry
+    theme:                 jroller
+    non_verbose_templates: true
+    with_show:             false
+    singular:              ~
+    plural:                ~
+    route_prefix:          my_country
+    with_doctrine_route:   true
+    actions_base_class:    sfActions
+
+    config:
+      actions: ~
+      fields:  
+        pub:
+          label: Approve?        
+      list:    
+        title: My country
+        display: [country, pub]
+      filter:  ~
+      form:    ~
+      edit:    ~
+      new:     ~

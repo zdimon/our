@@ -1,0 +1,117 @@
+
+<h1> <?= __('Buy credit') ?> </h1>
+
+
+<table class="table1" width="100%">
+             <th><?= __('For 3 month') ?></th>
+
+        <?php foreach($tbil as $t): ?>
+      <tr>
+          <th>
+              <?= $t->getTitle() ?>
+          </th>
+          
+          <td>
+              <div style="text-align: center; font-weight: bold"> <?php echo $t->getSumma() ?> EUR </div>
+               
+                <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
+              
+                <input type="hidden" name="cmd" value="_xclick">
+                <input type="hidden" name="business" value="jo39400@gmail.com">
+                <input type="hidden" name="lc" value="LT">
+                <input type="hidden" name="item_name" value="Payment on account [<?= $sf_user->getGuardUser()->getId() ?>]">
+                <input type="hidden" name="item_number" value="<?php echo $sf_user->getGuardUser()->getId(); ?>">
+                <input type="hidden" name="amount" value="0.5">
+                <input type="hidden" name="currency_code" value="EUR">
+                <input type="hidden" name="button_subtype" value="products">
+                <input type="hidden" name="rm" value="2">
+                <input type="hidden" name="return" value="http://<?= $_SERVER['HTTP_HOST']?>/_index.php/en/sfPaymentPayPal/success"/>
+                <input type="hidden" name="cancel_return" value="http://<?= $_SERVER['HTTP_HOST']?>/_index.php/en/sfPaymentPayPal/failure"/>
+                <input type="hidden" name="notify_url" value="http://<?= $_SERVER['HTTP_HOST']?>/_index.php/en/sfPaymentPayPal/ipn"/>
+                <input type="hidden" name="custom" value="<?php echo $t->getId() ?>"/>
+                <input type="hidden" name="custom_type" value="1"/>
+                <input type="image" src="https://www.paypal.com/en_US/i/btn/btn_buynowCC_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+                <img alt="" border="0" src="https://www.paypal.com/ru_RU/i/scr/pixel.gif" width="1" height="1">
+                </form>
+        
+          
+                      
+          </td>
+          
+          <td>
+            <div style="text-align: center; font-weight: bold"> <?php echo $t->getSumma()*2 ?> EUR </div>
+           <?php if(sfConfig::get('app_demo_account')):  ?>
+                <form action="https://www.sandbox.paypal.com/cgi-bin/webscr" method="post" target="_blank">
+              <?php else: ?>
+                <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
+              <?php endif; ?>
+                <input type="hidden" name="cmd" value="_xclick">
+                <input type="hidden" name="business" value="<?= sfConfig::get('app_paypal_email')?>">
+                <input type="hidden" name="lc" value="LT">
+                <input type="hidden" name="item_name" value="Payment on account [<?= $sf_user->getGuardUser()->getId() ?>]">
+                <input type="hidden" name="item_number" value="<?php echo $sf_user->getGuardUser()->getId(); ?>">
+                <input type="hidden" name="amount" value="<?php echo $t->getSumma()*2 ?>">
+                <input type="hidden" name="currency_code" value="EUR">
+                <input type="hidden" name="button_subtype" value="products">
+                <input type="hidden" name="rm" value="2">
+                <input type="hidden" name="return" value="http://<?= $_SERVER['HTTP_HOST']?>/sfPaymentPayPal/success"/>
+                <input type="hidden" name="cancel_return" value="http://<?= $_SERVER['HTTP_HOST']?>/sfPaymentPayPal/failure"/>
+                <input type="hidden" name="notify_url" value="http://<?= $_SERVER['HTTP_HOST']?>/sfPaymentPayPal/ipn"/>
+                <input type="hidden" name="custom" value="<?php echo $t->getId() ?>"/>
+                <input type="hidden" name="custom_type" value="2"/>
+                <input type="image" src="https://www.paypal.com/en_US/i/btn/btn_buynowCC_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+                <img alt="" border="0" src="https://www.paypal.com/ru_RU/i/scr/pixel.gif" width="1" height="1">
+                </form>   
+              
+                    
+          </td>
+          <td>
+              
+           
+              <div style="text-align: center; font-weight: bold"> <?php echo $t->getSumma()*3 ?> EUR </div>
+              <?php if(sfConfig::get('app_demo_account')):  ?>
+                <form action="https://www.sandbox.paypal.com/cgi-bin/webscr" method="post" target="_blank">
+              <?php else: ?>
+                <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
+              <?php endif; ?>
+                <input type="hidden" name="cmd" value="_xclick">
+                <input type="hidden" name="business" value="<?= sfConfig::get('app_paypal_email')?>">
+                <input type="hidden" name="lc" value="LT">
+                <input type="hidden" name="item_name" value="Payment on account [<?= $sf_user->getGuardUser()->getId() ?>]">
+                <input type="hidden" name="item_number" value="<?php echo $sf_user->getGuardUser()->getId(); ?>">
+                <input type="hidden" name="amount" value="<?php echo $t->getSumma()*3 ?>">
+                <input type="hidden" name="currency_code" value="EUR">
+                <input type="hidden" name="button_subtype" value="products">
+                <input type="hidden" name="rm" value="2">
+                <input type="hidden" name="return" value="http://<?= $_SERVER['HTTP_HOST']?>/sfPaymentPayPal/success"/>
+                <input type="hidden" name="cancel_return" value="http://<?= $_SERVER['HTTP_HOST']?>/sfPaymentPayPal/failure"/>
+                <input type="hidden" name="notify_url" value="http://<?= $_SERVER['HTTP_HOST']?>/sfPaymentPayPal/ipn"/>
+                <input type="hidden" name="custom" value="<?php echo $t->getId() ?>"/>
+                <input type="hidden" name="custom_type" value="3"/>
+                <input type="image" src="https://www.paypal.com/en_US/i/btn/btn_buynowCC_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+                <img alt="" border="0" src="https://www.paypal.com/ru_RU/i/scr/pixel.gif" width="1" height="1">
+                </form>
+                    
+                    
+          </td>
+      </tr>
+    <?php endforeach; ?>
+
+
+
+  
+
+</table>
+
+<br />
+
+
+
+<br />
+
+
+
+<div style="font-size: 16px"> <?= __('On your account') ?> : <?= $sf_user->getGuardUser()->getProfile()->getAccount() ?> &euro;</div>
+
+
+

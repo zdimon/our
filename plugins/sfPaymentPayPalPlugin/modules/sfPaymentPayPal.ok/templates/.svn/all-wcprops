@@ -1,0 +1,47 @@
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/repos/datebride/!svn/ver/9/plugins/sfPaymentPayPalPlugin/modules/sfPaymentPayPal/templates
+END
+sampleSuccess.php
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/repos/datebride/!svn/ver/9/plugins/sfPaymentPayPalPlugin/modules/sfPaymentPayPal/templates/sampleSuccess.php
+END
+failedSuccess.php
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/repos/datebride/!svn/ver/9/plugins/sfPaymentPayPalPlugin/modules/sfPaymentPayPal/templates/failedSuccess.php
+END
+invalidSuccess.php
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/repos/datebride/!svn/ver/9/plugins/sfPaymentPayPalPlugin/modules/sfPaymentPayPal/templates/invalidSuccess.php
+END
+ipnSuccess.php
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/repos/datebride/!svn/ver/9/plugins/sfPaymentPayPalPlugin/modules/sfPaymentPayPal/templates/ipnSuccess.php
+END
+failureSuccess.php
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/repos/datebride/!svn/ver/9/plugins/sfPaymentPayPalPlugin/modules/sfPaymentPayPal/templates/failureSuccess.php
+END
+_parameters.php
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/repos/datebride/!svn/ver/9/plugins/sfPaymentPayPalPlugin/modules/sfPaymentPayPal/templates/_parameters.php
+END
+completedSuccess.php
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/repos/datebride/!svn/ver/9/plugins/sfPaymentPayPalPlugin/modules/sfPaymentPayPal/templates/completedSuccess.php
+END

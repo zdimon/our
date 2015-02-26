@@ -1,0 +1,3 @@
+onlyregister:
+  allow_ssl: off
+  require_ssl: false
