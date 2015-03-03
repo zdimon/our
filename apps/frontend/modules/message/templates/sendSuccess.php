@@ -23,17 +23,17 @@ function insertImage(name) {
 <div id="status_div" >
 
 </div>
-<div align="center">
-    <div style=" padding: 10px; width: 550px; border: 1px solid #FFB552">
-        <table class="" width="100%" border="0" cellspacing="0" cellpadding="0">
+<div align="center" style="color: black; ">
+    <div style=" padding: 10px; width: 550px; border: 1px solid #FFB552; background: #fff;">
+        <table class="table3" width="100%" border="0" cellspacing="0" cellpadding="0">
             <tr>
 
-                <td width="200px">
+                <td width="200px" style="color: black">
                     <?= include_partial('global/common/user_info',array('profile'=>$user_to->getProfile(),'arrc'=>$arrc,'arrl'=>$arrl)) ?>
 
                  </td>
                   <?php if(isset($reply)):?>
-                 <td valign="top" style="padding-left: 10px">
+                 <td valign="top" style="padding-left: 10px;">
                     <b> <?= __('Ответ на сообщение') ?>:</b>
 
                  </td>
@@ -43,7 +43,7 @@ function insertImage(name) {
         </table>
 
          <?php if($reply): ?>
-                <div style="padding: 10px">
+                <div style="padding: 10px; background: #fff; color: black">
 
                    <?= $reply->getContent(ESC_RAW) ?>
 

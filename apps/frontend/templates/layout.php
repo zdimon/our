@@ -82,7 +82,7 @@ function googleTranslateElementInit() {
                       </div>
                     
                      <input value="<?php echo __('Enter') ?>" type="submit" class="but">
-                     <a class="block size11 white" href="<?php echo url_for('registration/index') ?>"><?= __('Registration')?></a>
+                     <a class="block size11 white but" href="<?php echo url_for('registration/index') ?>"><?= __('Registration')?></a>
                      
                 </form>
               <?php endif ?>

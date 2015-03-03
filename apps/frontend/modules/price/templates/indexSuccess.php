@@ -26,8 +26,8 @@
     <th  style="background: #968960"><?= __('Bronze Member') ?><br> <p class="pr">5 &euro;</p></th>
     <th  style="background: #7F7E7B"><?= __('Silver Member') ?><p class="pr">10 &euro;</p></th>
     -->
-    <th  style="background: #EAE73F"><?= __('Gold Member') ?><p class="pr">25 &euro;</p></th>
-    <th  style="background: #D4DDDD"><?= __('Platinium Member') ?><p class="pr">30 &euro;</p></th>
+    <th  style="background: #EAE73F"><?= __('Gold Member') ?><p class="pr">20 &euro;</p></th>
+    <th  style="background: #D4DDDD"><?= __('Platinium Member') ?><p class="pr">25 &euro;</p></th>
 </tr>
 
 <tr>
