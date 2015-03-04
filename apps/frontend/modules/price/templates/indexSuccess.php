@@ -288,7 +288,7 @@
     <td><?= image_tag('/images/non.png')?></td>
     <td><?= image_tag('/images/non.png')?></td>
     -->
-    <td><?= __('Option') ?></td>
+    <td><?= image_tag('/images/non.png')?></td>
     <td style="background: #D4DDDD"><?= image_tag('/images/valabl.png')?></td>
 </tr>
 

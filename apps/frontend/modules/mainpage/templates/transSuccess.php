@@ -80,3 +80,9 @@ $whom = __('her');
 <?= __('Thanks, please check your email box, we sent you a link to activate your email (%1%). Please click on this link to continue your registration.') ?>
 <?= __('Totaly free for men till the 30th September') ?>
 <?= __('Totally free for men till the 30th September') ?>
+
+
+<?= __('Optional photos to add') ?>
+<?= __('1 Photo obligatory') ?>
+
+

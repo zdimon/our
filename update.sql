@@ -1,0 +1,9 @@
+ALTER TABLE sf_guard_user ADD COLUMN image1 character varying(250);
+ALTER TABLE sf_guard_user ADD COLUMN image2 character varying(250);
+ALTER TABLE sf_guard_user ADD COLUMN image3 character varying(250);
+ALTER TABLE sf_guard_user ADD COLUMN image4 character varying(250);
+ALTER TABLE sf_guard_user ADD COLUMN image5 character varying(250);
+ALTER TABLE sf_guard_user ADD COLUMN image6 character varying(250);
+ALTER TABLE sf_guard_user ADD COLUMN image7 character varying(250);
+ALTER TABLE sf_guard_user ADD COLUMN image8 character varying(250);
+ALTER TABLE sf_guard_user ADD COLUMN image9 character varying(250);

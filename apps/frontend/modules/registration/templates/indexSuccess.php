@@ -2,6 +2,11 @@
 <h1><?= __('Registration') ?></h1>
 
 
+                    <div  style="text-align: center">
+                        <h2 style=" color: white;"><?php echo __('Totally free for women') ?> / Совершенно бесплатно для женщин</h3>
+                    </div>
+
+
 <form method="post" class="form_style validat"  action="<?php echo url_for('registration/index') ?>" enctype="multipart/form-data" >
                     <?php echo $form->renderHiddenFields() ?>
                     <?php echo $form->renderGlobalErrors() ?>
@@ -158,9 +163,11 @@
                     </div>
 
                     <div class="row">
+                         <div style="color: red; padding-left: 114px;"> <strong> <?= __('1 Photo obligatory') ?> </strong></div>
                         <?php echo $form['image']->renderLabel(null, array('style'=>'width: 100px','class' => 'required star short')) ?><span style="color: red">*</span>
                         <?php echo $form['image'] ?>
                         <?php echo $form['image']->renderError() ?>
+                         <div style="color: white; padding-left: 114px;"> <strong> <?= __('Optional photos to add') ?> </strong></div>
                     </div>
 
 
@@ -281,9 +288,7 @@
                         <input class="" style="width: 180px; height: 30px" type="submit" value="<?php echo __('Register') ?>" />
                     </div>
 
-                    <div  style="text-align: center">
-                        <h2 style=" color: red; padding-left: 80px"><?php echo __('Totally free for women') ?> / Совершенно бесплатно для женщин</h3>
-                    </div>
+
 
 
                 </form>
