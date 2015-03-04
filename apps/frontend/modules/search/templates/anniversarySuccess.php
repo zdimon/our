@@ -28,7 +28,7 @@
       ?>
       <?php  include_partial('global/common/search_item',array('profile'=>$u,'arrc'=>$arrc)); ?>
 
-              <?php if($i%9==0): ?>
+              <?php if($i==9): ?>
             <div style="clear: both"></div>
             <div align="center">
 
