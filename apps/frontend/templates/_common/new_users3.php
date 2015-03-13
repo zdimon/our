@@ -20,7 +20,7 @@ else
 
 $q= Doctrine::getTable('Profile')
     ->createQuery('a')
-    ->where('a.is_active=? and a.status_id=1 and a.gender=? and a.with_photo=? and a.timenew>?',array(true,$gen,true,time()))
+    ->where('a.is_active=? and a.status_id=1 and a.gender=? and a.with_photo=?',array(true,$gen,true))
     ->orderBy('a.id DESC')
     ->limit(2);
 
