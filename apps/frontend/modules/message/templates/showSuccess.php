@@ -3,7 +3,7 @@
 <?php include_partial('message/menu')?>
 <div align="center">
     <div style=" padding: 10px; width: 550px; border: 1px solid #FFB552">
-<table width="100%">
+<table width="100%" class="table3">
     <tr>
     <td valign="top" width="90px">
         <?php include_partial('global/common/user_info',array('profile'=>$m->getFromUser()->getProfile(),'arrc'=>$arrc,'arrl'=>$arrl)); ?>

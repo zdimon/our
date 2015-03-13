@@ -5,16 +5,16 @@
    <?php include_partial('message/menu')?>
 
 
-    <div style="float: right"> <?= link_to(__('Вернутсья к списку контактов'),'message/personal') ?></div>
+    
 
     <?php if($pager->getNbResults()):?>
 
-    <table>
+    <table class="table3" width="100%">
     <tr>
 
         <td valign="top">
              <?= include_partial('global/common/user_info',array('profile'=>$ab->getsfGuardUser()->getProfile(),'arrc'=>$arrc,'arrl'=>$arrl)) ?>
-           
+           <div style="float: right"> <?= link_to(__('Вернутсья к списку контактов'),'message/personal') ?></div>
         </td>
     </tr>
     </table>
@@ -23,7 +23,7 @@
 <div style="height: 800px; overflow: auto">
     <?php foreach ($pager->getResults() as $m): ?>
 
-                 <table class="table1" width="100%" border="0" cellspacing="0" cellpadding="0">
+                 <table class="table3" width="100%" border="0" cellspacing="0" cellpadding="0">
                       <tr>
                         <th><span class="date_massages"><?= format_date($m->getCreatedAt(),'D') ?></span> Letter # <?= $m->getId() ?></th>
                         <th class="status not_answ"><?= $m->getStatus() ?></th>
