@@ -4,3 +4,6 @@
 
 
 <a href="<?php $_SERVER['HTTP_HOST'] ?>/<?=  $profile->getsfGuardUser()->getCulture() ?>/registration/activate?code=<?= $profile->getsfGuardUser()->getSalt() ?>" > Activation link </a>
+
+
+

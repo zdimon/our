@@ -16,6 +16,14 @@ class profileActions extends commonActions
   * @param sfRequest $request A request object
   */
 
+ public function executeDell(sfWebRequest $request)
+    {
+         $p = sfGuardUserTable::getInstance()->find($request->getParameter('id'));
+         $p->delete();
+         $this->redirect ( 'profile' );
+
+    }
+
     public function executeSearchm(sfWebRequest $request)
     {
         if(strlen($request->getParameter('email')))

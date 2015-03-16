@@ -25,7 +25,7 @@
 
 
                 <a href="<?php $_SERVER['HTTP_HOST'] ?>/<?=  $profile->getsfGuardUser()->getCulture() ?>/registration/activate?code=<?= $profile->getsfGuardUser()->getSalt() ?>" > Activation link </a>
-
+               <b> Last login - <?=  $profile->getsfGuardUser()->getLastLogin() ?> </b>
 
             </td>
 
@@ -136,6 +136,13 @@
 
                 <p><a style="display: block; width: 100px; margin-bottom: 2px" href="<?= url_for('user/inblack?id='.$profile->getId()) ?>" id="dialog_link" class="ui-state-default ui-corner-all"><span class="ui-icon ui-icon-check"></span><?= __(' Black list add/rem') ?></span></a></p>
                 <p><a style="display: block; width: 100px; margin-bottom: 2px" href="<?= url_for('http://'.$_SERVER['HTTP_HOST'].'/admin.php/guarduser/'.$profile->getUserId().'/edit') ?>" id="dialog_link" class="ui-state-default ui-corner-all"><span class="ui-icon ui-icon-check"></span><?= __('Settings') ?></span></a></p>
+
+
+ <p><a style="display: block; width: 100px; margin-bottom: 2px" href="<?= url_for('http://'.$_SERVER['HTTP_HOST'].'/admin.php/profile/dell?id='.$profile->getUserId()) ?>" id="dialog_link" class="ui-state-default ui-corner-all" onclick="return confirm('Are you sure you want to delete?')"><span class="ui-icon ui-icon-check"></span><?= __('Delete') ?></span></a></p>
+
+
+
+
 
             </td>
 
