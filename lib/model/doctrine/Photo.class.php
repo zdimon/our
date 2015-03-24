@@ -154,49 +154,53 @@ class Photo extends BasePhoto
         $middle_photo_width =  96;
         $middle_photo_height =  138;
 
+        if(file_exists($uploadDir . '/photo/original/' . $value)) {
 
 
+            $uploadDir = sfConfig::get ( 'sf_upload_dir' );
+            $img_small = new sfImage( $uploadDir . '/photo/original/' . $value,null);
+            $img_middle = new sfImage( $uploadDir . '/photo/original/' . $value,null);
+            $img_big = new sfImage( $uploadDir . '/photo/original/' . $value,null);
+            $img_orig = new sfImage( $uploadDir . '/photo/original/' . $value,null);
+           // $img->thumbnail(sfConfig::get('app_photo_width'),sfConfig::get('app_photo_height'),'top');
+            $img_small->thumbnail($small_photo_width,$small_photo_height,'top');
+            $img_small->saveAs($uploadDir . '/photo/small_thumbnail/' . $value);
 
-        $uploadDir = sfConfig::get ( 'sf_upload_dir' );
-        $img_small = new sfImage( $uploadDir . '/photo/original/' . $value,null);
-        $img_middle = new sfImage( $uploadDir . '/photo/original/' . $value,null);
-        $img_big = new sfImage( $uploadDir . '/photo/original/' . $value,null);
-        $img_orig = new sfImage( $uploadDir . '/photo/original/' . $value,null);
-       // $img->thumbnail(sfConfig::get('app_photo_width'),sfConfig::get('app_photo_height'),'top');
-        $img_small->thumbnail($small_photo_width,$small_photo_height,'top');
-        $img_small->saveAs($uploadDir . '/photo/small_thumbnail/' . $value);
+            $img_middle->thumbnail($middle_photo_width,$middle_photo_height,'top');
+            $img_middle->saveAs($uploadDir . '/photo/middle_thumbnail/' . $value);
 
-        $img_middle->thumbnail($middle_photo_width,$middle_photo_height,'top');
-        $img_middle->saveAs($uploadDir . '/photo/middle_thumbnail/' . $value);
+           // $bg = new sfImage( sfConfig::get ( 'sf_web_dir' ).'/images/bth.jpg', null);
+            $img_big->thumbnail($big_photo_width,$big_photo_height,'top');
+            //$bg->overlay($img_big, array(100,100));
+            //$img_big->resize($big_photo_width,null);
+            //$img_big->fill(0,0,'#000000');
+            $img_big->saveAs($uploadDir . '/photo/big_thumbnail/' . $value);
 
-       // $bg = new sfImage( sfConfig::get ( 'sf_web_dir' ).'/images/bth.jpg', null);
-        $img_big->thumbnail($big_photo_width,$big_photo_height,'top');
-        //$bg->overlay($img_big, array(100,100));
-        //$img_big->resize($big_photo_width,null);
-        //$img_big->fill(0,0,'#000000');
-        $img_big->saveAs($uploadDir . '/photo/big_thumbnail/' . $value);
+           // $thumbnail = new sfThumbnail(333, 488);
+           // $thumbnail = new sfThumbnail(333, 488, true, true, 75);
+          //  $thumbnail->loadFile( $uploadDir . '/photo/original/' . $value);
+           // $thumbnail->save($uploadDir . '/photo/big_thumbnail/' . $value, 'image/jpeg');
 
-       // $thumbnail = new sfThumbnail(333, 488);
-       // $thumbnail = new sfThumbnail(333, 488, true, true, 75);
-      //  $thumbnail->loadFile( $uploadDir . '/photo/original/' . $value);
-       // $thumbnail->save($uploadDir . '/photo/big_thumbnail/' . $value, 'image/jpeg');
+            $water = new sfImage(sfConfig::get ( 'sf_web_dir' ).'/images/tag.png');
 
-        $water = new sfImage(sfConfig::get ( 'sf_web_dir' ).'/images/tag.png');
+            $arsize = getimagesize($uploadDir . '/photo/original/' . $value);
+            $w = $arsize[0];
 
-        $arsize = getimagesize($uploadDir . '/photo/original/' . $value);
-        $w = $arsize[0];
-
-        if($w<313)
-        {
+            if($w<313)
+            {
 
 
-            $water->resize($w-10,null);
-            $water->saveAs($uploadDir . '/photo/original/111.png');
+                $water->resize($w-10,null);
+                $water->saveAs($uploadDir . '/photo/original/111.png');
 
+            }
+
+            $img_orig->overlay($water, 'bottom-center');
+            $img_orig->saveAs($uploadDir . '/photo/original/' . $value);
+
+        } else {
+           echo 'file does not exist';
         }
-
-        $img_orig->overlay($water, 'bottom-center');
-        $img_orig->saveAs($uploadDir . '/photo/original/' . $value);
 
 
     }

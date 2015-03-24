@@ -452,7 +452,7 @@ public function executeAdv(sfWebRequest $request)
         elseif($request->getParameter('order')=='unrating')
         {
             $q->addWhere('a.rating>0');
-            //$q->orderBy('a.rating ASC');
+            $q->orderBy('a.rating ASC, a.id');
         }
         elseif($request->getParameter('order')=='new')
         {
